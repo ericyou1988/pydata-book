@@ -43,7 +43,8 @@ ndata = pd.merge(nutrients,info,how='outer')
 fig = plt.figure()
 result = ndata.groupby(['nutrient', 'fgroup'])['value'].quantile(0.5)
 result['Zinc, Zn'].sort_values().plot(kind='barh')
-fig.show()
+plt.show()
+# fig.show()
 
 by_nutrient = ndata.groupby(['nutgroup', 'nutrient'])
 
